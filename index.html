@@ -1,0 +1,414 @@
+
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <style>
+    
+            body{
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+                background-color: rgb(240, 240, 240)
+    
+            }
+    
+            .navigation_bar {
+    
+    
+               width:100%;
+
+               background-color: white;
+
+               box-shadow: 0px 4px 10px -6px grey;
+
+               text-align: center;
+
+               overflow: auto;
+
+               
+            }
+    
+            .navigation_bar a {
+    
+                float: left ;
+    
+                display: block;
+
+                margin-top: 10px;
+    
+                padding: 20px;
+    
+                
+                font-size:larger;
+
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+                text-decoration: none;
+    
+                
+            }
+    
+            .navigation_bar a:hover{
+    
+              color: rgb(64,204,209);
+    
+            }
+            
+            .active {
+                
+                color: rgb(64,204,209);
+                
+            
+            }
+
+            .inactive{
+                color: black;
+            }
+    
+            .mytracker{
+    
+                border: 1px solid grey;
+
+                margin-left: 100px;
+
+                margin-top: 40px;
+
+    
+                background-color: lightblue;
+
+
+            }
+
+            @keyframes mymove{
+
+                30% {box-shadow: 10px 15px 25px blue;}
+            }
+
+            .mydonate img:hover{
+
+                box-shadow: 5px 8px 18px blue ;
+            }
+
+           .emergency:hover {
+
+            box-shadow: 10px 20px 30px red;
+           }
+
+           .boxoftracker{
+               background-color: rgb(252,248,228);
+               box-shadow: 0px 2px 2px -2px grey ;
+               height: 800px ;
+               
+
+           }
+
+           .verticalline{
+               margin-left:550px ;
+               margin-top:-250px ;
+               height: 600px;
+               border-left: 4px solid grey;
+
+
+
+           }
+
+           .twitterfeed{
+               margin-left: 650px;
+               margin-top: -600px;
+               width: 1000px;
+               height: 200px;
+
+           }
+
+           .implinks{
+               width: 500px ;
+               margin-top: 160px;
+               border: 1px solid rgb(5, 5, 5);
+               border-radius: 120px;
+               background-color: rgb(223,240,217); 
+           }
+
+           .implinks li{
+               
+               font-size: large;
+               font-weight: lighter;
+               margin-left: 80px ;
+           }
+
+           .implinks li a{
+               text-decoration: none;
+           }
+
+           .implinks li a:visited{
+               color: black;
+           }
+
+           .head:hover {
+
+               color: red;
+
+               text-shadow: 2px 5px 8px rgb(245, 10, 49);
+
+               cursor: pointer;
+
+           }
+
+          .head {
+            font-size: 20px;
+            font-weight: lighter;
+            transition: 0.75s;
+           }
+
+           .mynearest a {
+            color: black;
+            text-decoration: none;
+
+            }
+
+            .head:visited {
+                color: black;
+
+            }
+
+            .head{
+                margin-left: 30px;
+                
+                font-size: em;
+
+            }
+
+            a{
+                text-decoration: none;
+
+            }
+
+            a:visited{
+                color: black;
+            }
+
+            .boxoftools{
+                background-color: rgb(216,237,247);
+            }
+
+            .stripfortools{
+                margin-top: 880px;
+                width: 100%;
+                height: 60px;
+                background-color: white;
+                box-shadow: 0px 10px 12px -12px black;
+            }
+    
+    
+    
+    
+        </style>
+    
+    </head>
+    
+    <body>
+    
+     
+        <div class="navigation_bar" id="mynav">
+
+            <img src="https://lh3.googleusercontent.com/52URAbolCJz8ze-BM_hDj3WSplQAP4ApJExLgnZRZC-7W-igtunAxv5g-xUiFnBdSDfLncoquzrFreb9xOAWJTZDGVMpIOdkJAu0apZx5K0sAWWpoZ0rq1l8tKpK2qrYcnjohH5JJw=w2400" height="80px" style="float: left;" ></img>
+
+            <a style="margin-left:-15px ;margin-top: -5px ;font-size: 2.5em;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ; ">FIGHT COVID 19</a>
+    
+            <a href="" class="active" style="margin-left: 280px;"> <i class="fa fa-fw fa-home" ></i>   HOME</a>
+
+            <a href="" class="inactive"> <i class="fa fa-info"></i>  INFO</a>
+    
+            <a href="" class="inactive"> <i class="fa fa-lightbulb-o"></i>   IDEAS</a>
+    
+            <a href="" class="inactive"> <i class="fa fa-user-md"></i>  EXPERIENCES</a>
+
+            <a href="" class="emergency" style="text-decoration: none;color: red;transition: 1s;border: 1px solid red ;border-radius: 4px; ">EMERGENCY</a>
+           
+        </div>
+    
+        
+
+         
+
+     
+        </div>
+
+            <p></p><p></p><p></p>
+            
+            <div class="boxoftracker" >
+
+             <h2 style="margin-left:100px;font-size: 60px ;font-weight: lighter;">COVID-19 TRACKER</h2>   
+             <div style="margin-left:110px;margin-top:-40px;color: grey;font-size: 1.2em;">Navigate in the box to get info about the desired area</div>
+    
+            <iframe class="mytracker"  src="https://www.bing.com/covid/local/india?vert=graph" width="1220px" height="600px"></iframe>
+
+            <div style="margin-top: -280px;margin-right:1260px;font-size: small;color:rgb(0, 13, 19);">SEARCH HERE  </div>
+    
+    
+             </div>
+   
+
+
+
+        
+
+        
+
+        <div style="margin-top: 20px ;float: left ;background-color: rgb(252,248,228) ; height: 700px; width: 100% ;"  class="mydonate"  >
+
+
+        <h1 style="margin-top: 30px;margin-left:80px ; color: black;font-weight: lighter ;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size:45px;" >MAKE A DIFFERENCE</h1>
+
+        <img style="margin-top: -50px ;    margin-left: 32px ; height: 120px; animation: mymove 4s infinite;border: 1px solid black;border-radius: 40px ;" src="https://lh3.googleusercontent.com/AQAx4hGPEuAtXgQ4KdrdNu9TpixQSuTS-0Pz_c86JNpZnRZIcD9lrteMlj3Cp3doyWmCszA4nnuKzdHZF6Jvmif5ygM7SdBB5DBRb4tqoOfGj7PamIqKK9vJnWXx0aWY2zMD9YO1=w2400"> </img>
+
+        <a href="https://covid19responsefund.org" target="_blank"><img src="https://pbs.twimg.com/profile_images/875476478988886016/_l61qZdR_400x400.jpg" style="float:left;transition:1s;border: 2px solid black;" width="150px" height="150px" ></img></a>
+
+        <a href="https://pmnrf.gov.in/en/online-donation" target="_blank"><img src="https://lh3.googleusercontent.com/qygvdPY4h8Ituj5Fzl0IkaVU1B0MRbxNX-0BkY47FDQMzSz3QDK1C-U4PuyD5Dbda-C95F7zM0tsj0vMhX5buf_uTezxVjum3cQSsd5a0eXvRPqL1y-1HJgyRGu-EiZAtqvzjmLKFA=w2400" style="margin-left: 28px;transition: 1s;border:1px solid black ;" width="150px" height="150px" href="https://pmnrf.gov.in/en/online-donation" target="_blank"></img></a>
+
+        
+        
+        <div class="verticalline" ></div>
+
+        
+        
+        
+        <div class="twitterfeed">
+
+            <a class="twitter-timeline" data-lang="en" data-width="650" data-height="600" data-theme="dark" href="https://twitter.com/WHO?ref_src=twsrc%5Etfw">Tweets by WHO</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="implinks" >
+
+            <h1 style="margin-top: 30px;margin-left:55px ; color: black;font-weight: lighter ;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size:45px;" >IMPORTANT LINKS</h1>
+
+            <ul>
+                <li style="margin-top: -20px;"><a href="https://www.who.int" target="_blank">World Health Organisation</a></li>
+                <br>
+                <li><a href="https://www.mygov.in" target="_blank">Indian Government Covid-19</a></li>
+                <br>
+                <li><a href="https://google.com/covid19-map/?hl=en" target="_blank">WorldWide Statistics</a></li>
+
+
+            </ul>
+
+
+
+        </div>
+
+
+
+
+       </div>
+
+       <div class="boxoftools" style="margin-top:-400px">
+
+       <div class="stripfortools" ><a style="margin-left:30px;margin-top: 50px ;color: black;font-weight: lighter;font-size: 3em;">IMPORTANT TOOLS</a> </div>
+
+
+
+        <h1 class="head" id="ntchead" onclick="display('myNTC','ntchead',0)" style="margin-top: 280px;" ><i class="fa fa-hand-o-right"></i>NEAREST TEST CENTER LOCATOR</h1>
+   
+        <p><iframe src="//batchgeo.com/map/7ceddc927977adadfefe9a4a145270db" id="myNTC"   width="0" height="0" sandbox="allow-top-navigation allow-scripts allow-popups allow-same-origin allow-modals allow-forms" ></iframe></p>
+   
+   
+        
+        
+        <h1 class="head"  id="ffhead" onclick="display('myFF','ffhead',1)" ><i class="fa fa-hand-o-right"></i>NEAREST FREE FOOD LOCATOR</h1>
+   
+       <p><iframe src="//batchgeo.com/map/ab8dd03bb87d7047b6df3298f43ccb84" id="myFF" width="0" height="0" sandbox="allow-top-navigation allow-scripts allow-popups allow-same-origin allow-modals allow-forms" ></iframe></p>
+   
+   
+       
+       
+       <h1 class="head"  id="acmhead" onclick="display('myACM','acmhead',2)" ><i class="fa fa-hand-o-right"></i>NEAREST ACCOMODATION LOCATOR</h1>
+   
+       <p><iframe src="//batchgeo.com/map/a1d78f6e5b48b22b44c1c614b0e54396" id="myACM" width="0" height="0" sandbox="allow-top-navigation allow-scripts allow-popups allow-same-origin allow-modals allow-forms" ></iframe></p>
+   
+   
+    
+       <h1 class="head"  id="fdhead" onclick="display('myFD','fdhead',3)" ><i class="fa fa-hand-o-right"></i>NEAREST FOOD DELIVERY LOCATOR</h1>
+   
+       <p><iframe src="//batchgeo.com/map/8f7710cb269fb99127c08290d9a9b22f" id="myFD" width="0" height="0" sandbox="allow-top-navigation allow-scripts allow-popups allow-same-origin allow-modals allow-forms" ></iframe></p>
+   
+   
+       
+       <a   href="https://www.dropbox.com/request/oFmc3tMJdWgvIGbMRJFn" target="_blank" ><h1 class="head" id="illegalupload" ><i class="fa fa-hand-o-right"></i>REPORT ILLEGAL ACTIVITY( BREAKING OF SOCIAL DISTANCE)</h1></a>
+       
+       <a  href="https://www.dropbox.com/sh/xgpeyjjezfjjvwn/AABaVCAg8Z0Gn_e2bs9Zlk6oa?dl=0" target="_blank" ><h1 class="head"  id="illegalview" ><i class="fa fa-hand-o-right"></i>SEE SUBMITTED ILLEGAL ACTIVITIES</h1></a>
+
+
+    </div>
+   
+   
+       <script>
+           var x = new Array(0, 0, 0, 0);
+           function display(mapid,headid,i){
+               x[i]=x[i]+1;
+               if(x[i]%2==1)
+               {
+               document.getElementById(headid).innerHTML=" <i class='fa fa-hand-o-right'></i> CLICK HERE TO HIDE IT" ;
+               document.getElementById(mapid).style.border="4px solid black" ;
+   
+               document.getElementById(mapid).style.height="700" ;
+               document.getElementById(mapid).style.width="100%" ;
+               }
+              
+              else 
+              {
+              document.getElementById(headid).innerHTML=" <i class='fa fa-hand-o-right'></i> CLICK HERE FOR LOCATING THE NEAREST " ;
+              if(i==0)document.getElementById(headid).innerHTML=document.getElementById(headid).innerHTML+"TEST CENTER" ;
+              if(i==1)document.getElementById(headid).innerHTML=document.getElementById(headid).innerHTML+"FREE FOOD" ;
+              if(i==2)document.getElementById(headid).innerHTML=document.getElementById(headid).innerHTML+"ACCOMODATION" ;
+              if(i==3)ocument.getElementById(headid).innerHTML=document.getElementById(headid).innerHTML+"FOOD DELIVERY" ;
+   
+   
+   
+              document.getElementById(mapid).style.border="4px solid black" ;
+   
+              document.getElementById(mapid).style.height="0" ;
+              document.getElementById(mapid).style.width="0" ;
+   
+              }
+   
+           }
+           
+       </script>
+
+
+
+    <div style="box-shadow: 0px -4px 4px grey;margin-top: 100px;background-color: white;height:80px ;width: 100%;" class="ending" >
+
+        
+
+            <div  style="margin-top: 20px;float: right;font-size: 20px;font-weight:lighter;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                Developed & Designed by <a style="text-decoration: none;color: black;" href="mailto:lifeofpriyam2@gmail.com">Priyam</a>.<br> 
+                Whatsapp at 9304545237
+            </div>
+        
+       
+    
+    </div>
+
+
+
+    
+    </body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </html>
+    
+    
