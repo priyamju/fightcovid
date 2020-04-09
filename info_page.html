@@ -1,0 +1,465 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <style>
+    
+            body{
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+                background-color: rgb(240, 240, 240)
+    
+            }
+    
+            .navigation_bar {
+    
+    
+               width:100%;
+
+               background-color: white;
+
+               box-shadow: 0px 4px 10px -6px grey;
+
+               text-align: center;
+
+               overflow: auto;
+
+               
+            }
+    
+            .navigation_bar a {
+    
+                float: left ;
+    
+                display: block;
+
+                margin-top: 10px;
+    
+                padding: 20px;
+    
+                
+                font-size:larger;
+
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+                text-decoration: none;
+    
+                
+            }
+    
+            .navigation_bar a:hover{
+    
+              color: rgb(64,204,209);
+    
+            }
+            
+            .active {
+                
+                color: rgb(64,204,209);
+                
+            
+            }
+
+            .inactive{
+                color: black;
+            }
+
+            .emergency:hover {
+
+            box-shadow: 10px 20px 30px red;
+             
+            }
+
+            .videosection iframe{
+                border: 1px solid black;
+                width: 250px;
+                height: 140px;
+                border-radius: 20px;
+            }
+
+            .videosection li{
+                font-size: 30px;
+                font-weight: lighter;
+            }
+
+            .stripforvs:hover .textvs{
+                color: rgb(64,204,209) ;
+                cursor: pointer;
+            }
+
+            .stripforovs:hover .textovs{
+                color: rgb(64,204,209) ;
+                cursor: pointer;
+            }
+
+            .stripforqas:hover .textqas{
+                color: rgb(64,204,209) ;
+                cursor: pointer;
+            }
+
+            .stripforrds:hover .textrds{
+                color: rgb(64,204,209) ;
+                cursor: pointer;
+            }
+
+            .mynavbar2 {
+
+                width: 400px;
+                background-color: white;
+                overflow: auto;
+                border-bottom: 2px solid lightblue;
+                
+                
+            }
+
+            .mynavbar2 a{
+
+                display: block;
+
+                float: left;
+
+                margin-left: 20px;
+                
+                padding: 16px ;
+
+                cursor: pointer;
+            
+            }
+
+            .mynavbar2 a:hover{
+                color: blue ;
+            }
+
+            #desov{
+                display: none;
+                width: 600px;
+                margin-top: 30px;
+                font-weight:250;
+                font-size: 0.95em;
+                
+            }
+
+            #dessym{
+                display: none ;
+                width: 600px;
+                margin-top: 30px;
+                font-weight:250;
+                
+            }
+
+            #despre{
+                display: none;
+                width: 600px;
+                margin-top: 30px;
+                font-weight:250;
+            }
+
+            #qas{
+                position: relative;
+                width: 800px;
+                height:1750px;
+                overflow: hidden;
+                display: none;
+            }
+
+            #iqa{
+
+                position: absolute;
+                top: -600px;
+                left: 0px;
+                width: 1400px;
+                height: 3000px;
+                border: 1px solid rgb(240, 240, 240);
+
+
+            }
+
+    
+
+            #rds a{
+                text-decoration: none;
+                margin-left: 30px;
+                color: black;
+              
+
+            }
+
+            #rds a:hover{
+                color:rgb(64,204,209);
+
+            }
+
+
+
+
+
+        </style>
+    
+</head>
+
+<body style="height: 100%;">
+
+ 
+    <div class="navigation_bar" id="mynav">
+
+        <img src="https://lh3.googleusercontent.com/52URAbolCJz8ze-BM_hDj3WSplQAP4ApJExLgnZRZC-7W-igtunAxv5g-xUiFnBdSDfLncoquzrFreb9xOAWJTZDGVMpIOdkJAu0apZx5K0sAWWpoZ0rq1l8tKpK2qrYcnjohH5JJw=w2400" height="80px" style="float: left;" ></img>
+
+        <a style="margin-left:-15px ;margin-top: -5px ;font-size: 2.5em;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ; ">FIGHT COVID 19</a>
+
+        <a href="" class="inactive" style="margin-left: 280px;"> <i class="fa fa-fw fa-home" ></i>   HOME</a>
+
+        <a href="" class="active"> <i class="fa fa-info"></i>  INFO</a>
+
+        <a href="" class="inactive"> <i class="fa fa-lightbulb-o"></i>   IDEAS</a>
+
+        <a href="" class="inactive"> <i class="fa fa-user-md"></i>  EXPERIENCES</a>
+
+        <a href="" class="emergency" style="text-decoration: none;color: red;transition: 1s;border: 1px solid red ;border-radius: 4px; ">EMERGENCY</a>
+       
+    </div>
+
+
+    <div class="stripforvs" id="stripvs" onclick="displayit('vs','stripvs',0) ;" style="margin-top: -40px;width: 100%;background-color: white;box-shadow:0px 4px 10px -6px grey;"><h1 class="textvs" style="margin-left: 60px;margin-top: 150px;font-weight: lighter;font-size:38px;" ><i class="fa fa-youtube-play"></i>VIDEO SECTION <i style="margin-left: 1300px;margin-top: -35px;" class="fa fa-plus"></i></h1></div>
+
+    
+    
+    <div class="videosection" id="vs" style="background-color: rgb(252,248,228);display: none ;transition: 2s;">
+
+        
+
+        <ul >
+
+            <li >PREVENTIVE MEASURES </li>
+            <br>
+
+            <iframe class="fvideo" style="margin-left: 40px;" src="https://www.youtube.com/embed/seA1wbXUQTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            <iframe class="ovideo" style="margin-left: 100px;" src="https://www.youtube.com/embed/J2jbEetZ8G4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="ovideo" style="margin-left: 100px;" src="https://www.youtube.com/embed/XwPVqXrJitI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="ovideo" style="margin-left: 100px;" src="https://www.youtube.com/embed/9Ay4u7OYOhA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+            <li style="margin-top: 15px;">STRENGHTENING IMMUNITY </li>
+            <br>
+
+            <iframe class="fvideo"  style="margin-left: 40px;" src="https://www.youtube.com/embed/b_wxaHwJ0aM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/Ch3_j8aWTYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/d-E76ki4Ih0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/UnFCXjfFYZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+            <li style="margin-top: 15px;">BEING PRODUCTIVE AMID LOCKDOWN</li>
+            <br>
+
+            <iframe class="fvideo"  style="margin-left: 40px;" src="https://www.youtube.com/embed/yOC7w8kfsB4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/0-QP7rurLH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/Ux79dhhbodQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/kfPG9KqwzQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+            <li style="margin-top: 15px;">MASKA & SANITISERS DIYs</li>
+            <br>
+
+            <iframe class="fvideo"  style="margin-left: 40px;" src="https://www.youtube.com/embed/C-blWNZQJX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/mMtuzEX3cSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/ew66uh8gbDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="ovideo"  style="margin-left: 100px;" src="https://www.youtube.com/embed/eeY-FVia1Vg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+        </ul>
+
+
+
+    </div>
+
+
+
+    <div class="stripforovs" id="stripov" onclick="displayit('ovs','stripov',1);displayov('dessym','navsym'); " style="margin-top: -140px;width: 100%;background-color: white;box-shadow:0px 4px 10px -6px grey;"><h1 class="textovs" style="margin-left: 60px;margin-top: 150px;font-weight: lighter;font-size:38px;" ><i class="fa fa-search"></i>COVID-19: OVERVIEW <i style="margin-left: 1300px;margin-top: -35px;" class="fa fa-plus"></i></h1></div>
+
+    <div class="ovsection" id="ovs" style="display: none;">
+
+    <div class="mynavbar2" id="navbar2" >
+
+        <a id="navov" onclick="displayov('desov',this)">Overview</a>
+        <a id="navsym" onclick="displayov('dessym',this)">Symptoms</a>
+        <a id="navpre" onclick="displayov('despre',this)">Preventions</a>
+
+
+    </div>
+
+
+    <div id="desov" >
+        Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.<br><br><br>
+
+       Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.<br>
+        <br>
+       The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. <br>
+        <br>
+
+       The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).<br>
+        <br>
+       At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available.
+    </div>
+
+
+    <div id="dessym">
+        The COVID-19 virus affects different people in different ways.  COVID-19 is a respiratory disease and most infected people will develop mild to moderate symptoms and recover without requiring special treatment.  People who have underlying medical conditions and those over 60 years old have a higher risk of developing severe disease and death.<br><br>
+
+Common symptoms include:<br><br>
+<ul style="margin-left:-20px">
+<li>fever</li><br>
+<li>tiredness</li><br>
+<li>dry cough.</li><br>
+Other symptoms include:<br><br>
+
+<li>shortness of breath</li><br>
+<li>aches and pains</li><br>
+<li>sore throat</li><br>
+
+<li>and very few people will report diarrhoea, nausea or a runny nose.</li><br>
+
+</ul>
+People with mild symptoms who are otherwise healthy should self-isolate and contact their medical provider or a COVID-19 information line for advice on testing and referral.<br><br>
+
+People with fever, cough or difficulty breathing should call their doctor and seek medical attention.
+
+
+    </div>
+
+    <div id="despre">
+
+        To prevent infection and to slow transmission of COVID-19, do the following:
+<br><br>
+<ul style="margin-left:-20px">
+
+<li>Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub. </li><br>
+<li>Maintain at least 1 metre distance between you and people coughing or sneezing.</li> <br>
+<li>Avoid touching your face. </li><br>
+<li>Cover your mouth and nose when coughing or sneezing. </li><br>
+<li>Stay home if you feel unwell. </li><br>
+<li>Refrain from smoking and other activities that weaken the lungs.</li><br> 
+<li>Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people. </li><br>
+    </div>
+
+    <div id="myss" onclick="ss()" style="border: 2px solid black;background-color: black;background-size: 100%;width:370px ;height:370px ;display: block;position: absolute;top:390px;right:160px;border-radius: 20px ;"></div>
+
+
+
+     </div>
+
+
+
+     <div class="stripforqas" id="stripqa" onclick="displayit('qas','stripforqa',2) ;" style="margin-top: -140px;width: 100%;background-color: white;box-shadow:0px 4px 10px -6px grey;"><h1 class="textqas" style="margin-left: 60px;margin-top: 150px;font-weight: lighter;font-size:38px;" ><i class="fa fa-question"></i>QUESTIONS & ANSWERS<i style="margin-left: 1300px;margin-top: -35px;" class="fa fa-plus"></i></h1></div>
+
+     <div id="qas" >
+
+        <iframe id="iqa" scrolling="no" src="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses" ></iframe>
+
+     </div>
+
+
+
+     <div class="stripforrds" id="striprds" onclick="displayit('rds','striprds',3) ;" style="margin-top: -140px;width: 100%;background-color: white;box-shadow:0px 4px 10px -6px grey;"><h1 class="textrds" style="margin-left: 60px;margin-top: 150px;font-weight: lighter;font-size:38px;" ><i class="fa fa-flask"></i>COVID-19:RESEARCH AND DEVELOPMENT<i style="margin-left: 1300px;margin-top: -35px;" class="fa fa-plus"></i></h1></div>
+
+     <div id="rds" style="display: none;">
+         <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov" target="_blank" style="margin-top: -20px;">Global research on corona disease</a><br><br>
+         <a href="https://www.who.int/blueprint/priority-diseases/key-action/novel-coronavirus/en/" target="_blank">Update on research activities</a><br><br>
+         <a href="https://www.who.int/ictrp/search/en/" target="_blank">International Clinical Trials Registry platform</a><br><br>
+         <a href="https://www.who.int/diagnostics_laboratory/EUL/en/" target="_blank">COVID-19 Emergency Use Listing Procedure</a>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        var x= new Array(0,0,0,0) ;
+
+        function displayit(section,strip,i){
+
+            x[i]+=1;
+            if(x[i]%2==1)document.getElementById(section).style.display= "block" ;
+            if(x[i]%2==0)document.getElementById(section).style.display= "none" ;
+           
+           
+
+        }
+
+        function displayov(myid,elem){
+
+            document.getElementById("desov").style.display="none" ;
+            document.getElementById("despre").style.display="none" ;
+            document.getElementById("dessym").style.display="none" ;
+
+            document.getElementById(myid).style.display="block" ;
+            
+            document.getElementById("navov").style.borderBottom="0px solid lightblue" ;
+            document.getElementById("navpre").style.borderBottom="0px solid lightblue" ;
+            document.getElementById("navsym").style.borderBottom="0px solid lightblue" ;
+            document.getElementById("navbar2").style.borderBottom="2px solid lightblue" ;
+              
+
+            elem.style.borderBottom="1.5px solid blue" ;
+        }
+
+        
+
+        var p=0;
+        
+        ss();
+
+        function ss(){
+            p++;
+            if(p>=5)p=0;
+            if(p==0)document.getElementById("myss").style.backgroundImage="url('https://www.who.int/images/default-source/health-topics/coronavirus/social-media-squares/blue-1.png')" ;
+            if(p==1)document.getElementById("myss").style.backgroundImage="url('https://www.who.int/images/default-source/health-topics/coronavirus/social-media-squares/blue-2.png')" ;
+            if(p==2)document.getElementById("myss").style.backgroundImage="url('https://www.who.int/images/default-source/health-topics/coronavirus/social-media-squares/blue-3.png')" ;
+            if(p==3)document.getElementById("myss").style.backgroundImage="url('https://www.who.int/images/default-source/health-topics/coronavirus/social-media-squares/blue-4.png')" ;
+            if(p==4)document.getElementById("myss").style.backgroundImage="url('https://pbs.twimg.com/media/EPjfjiuW4AAvqeh.jpg')" ;
+            setTimeout(ss,7000);
+            
+        }
+      
+      
+
+    </script>
+
+<div style="position: fixed;bottom: 0px;box-shadow: 0px -4px 4px grey;margin-top: 100px;background-color: white;height:80px ;width: 100%;" class="ending" >
+
+        
+
+    <div  style="margin-top: 20px;float: right;font-size: 20px;font-weight:lighter;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+        Developed & Designed by <a style="text-decoration: none;color: black;" href="mailto:lifeofpriyam2@gmail.com">Priyam</a>.<br> 
+        Whatsapp at 9304545237
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+    </html>
